@@ -3,15 +3,17 @@ title: "Proxmox に OpenWRT をインストールし、ルーターとして使�
 emoji: "🤖"
 type: "tech"
 topics: ["Proxmox", "OpenWRT", "Open vSwitch"]
-published: false
+published: true
 ---
 
 # 本記事の目的
 * 新品 PC へ Proxmox, Open vSwitch をインストールし、OpenWRT コンテナを稼働させ自作ルーターとする手順の紹介
 * 以下の状態がゴール
-* 次の記事[「Proxmox で自作したルーターのパケット監視に Suricata を使う」](https://zenn.dev/yuhichyoc/articles/suricata-in-proxmox)へ続く
+
 ![](/images/openwrt-in-proxmox/4_goal.png)
 ※ハードウェアの品番は動作確認を含めて併記しています
+
+* 本記事は次の記事「[Proxmox で自作したルーターのパケット監視に Suricata を使う](https://zenn.dev/yuhichyoc/articles/suricata-in-proxmox)」へ続く
 
 # 操作サマリー
 1. Proxmox をインストールするマシンを仮の LAN へ接続
@@ -47,7 +49,7 @@ published: false
         1. Forwards・DNS サーバーの追加
         1. Hostnames・ホスト設定
     1. System / System 設定ページを開く
-        1. General Settings・タイムゾーンの設定
+        * General Settings・タイムゾーンの設定
 1. OpenWRT 管理用 Web ページを閉じる
 1. ルーター稼働用の Proxmox 設定・Proxmox 管理用 Web ページへ戻る
     1. Proxmox コンソールを開く

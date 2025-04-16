@@ -3,12 +3,14 @@ title: "Proxmox で自作したルーターのパケット監視に Suricata を
 emoji: "🤖"
 type: "tech"
 topics: ["Proxmox", "Suricata", "OpenWRT", "Open vSwitch"]
-published: false
+published: true
 ---
 
 # 本記事の目的
 * 自作ルーターとした OpenWRT の WAN 側 NIC に届くパケットを Suricata で監視できるようセットアップする手順の紹介
 * 基本的な操作は[こちら](https://youtu.be/UXKbh0jPPpg?si=X9rVSSNYeraROK2W)を参照
+
+https://youtu.be/UXKbh0jPPpg?si=X9rVSSNYeraROK2W
 
 # 操作サマリー
 1. Proxmox 管理用 Web 画面を開く
@@ -28,7 +30,8 @@ published: false
 ## Suricata 稼働用コンテナ
 * WAN 側 NIC のファイアーウォール機能は OFF・IP アドレスを取得しない設定にする。詳細は後述
 * ネットワーク設定の IPv4, IPv6 を「静的」にすると IP アドレスを取得しない設定となる
-* LAN 側 NIC は Suricata セットアップ & ルールの取得に使用する
+* LAN 側 NIC は Suricata セットアップ & ルールの取得に使用する。図では省略
+
 ![](/images/suricata-in-proxmox/1_create_container.png)
 ![](/images/suricata-in-proxmox/2_turn_off_firewall.png)
 
@@ -109,6 +112,7 @@ suricata -T -c /etc/suricata/suricata.yaml -v
 
 ## ポートミラーリング設定
 * OpenWRT の WAN 側 NIC から Suricata の WAN 側 NIC へ Open vSwitch のポートミラーリングでパケットを転送する。下の画像の赤矢印
+
 ![](/images/suricata-in-proxmox/3_configure.png)
 
 ### 方法 1 : コンテナの起動をフックスクリプトでフック
