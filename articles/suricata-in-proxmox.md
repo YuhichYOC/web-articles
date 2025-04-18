@@ -12,6 +12,9 @@ published: true
 
 https://youtu.be/UXKbh0jPPpg?si=X9rVSSNYeraROK2W
 
+* 本記事の前提条件は「[Proxmox に OpenWRT をインストールし、ルーターとして使う](https://zenn.dev/yuhichyoc/articles/openwrt-in-proxmox)」
+* 本記事は次の記事「[Proxmox に Elasticsearch, Kibana をインストールし、Suricata のログを閲覧する](https://zenn.dev/yuhichyoc/articles/how_to_show_suricata_log_on_elasticsearch)」へ続く
+
 # 操作サマリー
 1. Proxmox 管理用 Web 画面を開く
 1. Suricata 稼働用コンテナの作成

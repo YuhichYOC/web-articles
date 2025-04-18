@@ -3,11 +3,13 @@ title: "Proxmox に Elasticsearch, Kibana をインストールし、Suricata �
 emoji: "🤖"
 type: "tech"
 topics: ["Proxmox", "Elasticsearch", "Suricata"]
-published: false
+published: true
 ---
 
 # 本記事の目的
 * Suricata によるパケット監視機能付き自作ルーターへ Elasticsearch と Kibana をインストールし、ログの視覚化を行う方法の紹介
+
+* 本記事の前提条件は「[Proxmox で自作したルーターのパケット監視に Suricata を使う](https://zenn.dev/yuhichyoc/articles/suricata-in-proxmox)」
 
 # 操作サマリー
 1. Proxmox 管理用 Web 画面を開く
